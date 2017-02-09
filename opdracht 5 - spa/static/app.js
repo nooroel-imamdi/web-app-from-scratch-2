@@ -5,13 +5,12 @@
         init: function() {
             routes.init();
             console.log(location.hash);
-            console.log(Date())
+//             console.log(Date()) niet relevant, wel leuk man.
         }
     };
 
     var routes = {
         init: function() {
-            // var oldLocation = location.hash;
             window.addEventListener('hashchange', function(){
                 sections.toggle(location.hash);
             })
