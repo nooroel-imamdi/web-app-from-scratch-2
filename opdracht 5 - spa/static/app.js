@@ -4,28 +4,28 @@
     var app = {
         init: function() {
             routes.init();
-            console.log(location.hash);
-            console.log(Date())
         }
     };
 
+    // Eventlistener for when the user clicks on a link and the hash changes
     var routes = {
         init: function() {
-            // var oldLocation = location.hash;
             window.addEventListener('hashchange', function(){
-                sections.toggle(location.hash);
+                sections.toggle(window.location.hash);
             })
         }
     };
 
+    // Gets the change in hash from routes() and searches DOM for 'section' and hides/shows the section selected.
     var sections = {
         toggle: function(route) {
             var mySection = document.querySelectorAll('section');
-            mySection.forEach( function(e) {
-                if('#' + e.id === route) {
-                    e.classList.remove('section__hide');
+
+            mySection.forEach( function(el) {
+                if('#' + el.id === route) {
+                    el.classList.remove('section__hide');
                 } else {
-                    e.classList.add('section__hide');
+                    el.classList.add('section__hide');
                 }
             });
         }
@@ -33,5 +33,4 @@
 
     app.init();
 
-    }()
-);
+    });

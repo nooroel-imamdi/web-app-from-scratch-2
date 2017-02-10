@@ -58,6 +58,7 @@ nav li{
 nav li a {
     color: #fff;
     font-size: 1.25em;
+    border: 10px solid transparent;
 }
 
 nav li:hover {
