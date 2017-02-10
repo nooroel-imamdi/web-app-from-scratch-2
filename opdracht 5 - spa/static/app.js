@@ -4,6 +4,7 @@
     var app = {
         init: function() {
             routes.init();
+            console.log(location.hash)
         }
     };
 
