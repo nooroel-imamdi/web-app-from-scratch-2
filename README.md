@@ -28,8 +28,7 @@ repo for web app from scratch
 - [AJAX and JSON tutorial] (https://www.youtube.com/watch?v=rJesac0_Ftw)
 
 
-####
-Assignments
+#### Assignments
 [assignment week 1] (https://docs.google.com/document/d/1HwaSkUa0jq_UfylsF4IUpM_Nq8Cg_te6avombFhlxj0/edit)
 
 
