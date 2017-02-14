@@ -22,12 +22,11 @@ repo for web app from scratch
 
 ## Week 2
 #### Link to slide:
-[Slide week 2] (https://docs.google.com/presentation/d/1ehoMqx5ZIRAjCkWYbMSsG62K3atTGrO0EXTlwztj1fY/edit#slide=id.g20d33f4b63_0_1}
+[Slide week 2] (https://docs.google.com/presentation/d/1ehoMqx5ZIRAjCkWYbMSsG62K3atTGrO0EXTlwztj1fY/edit#slide=id.g20d33f4b63_0_1)
 
 #### Other useful links
 - [AJAX and JSON tutorial] (https://www.youtube.com/watch?v=rJesac0_Ftw)
--
--
+
 
 ####
 Assignments
