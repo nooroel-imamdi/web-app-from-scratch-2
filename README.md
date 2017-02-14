@@ -29,6 +29,6 @@ repo for web app from scratch
 
 
 #### Assignments
-[assignment week 1] (https://docs.google.com/document/d/1HwaSkUa0jq_UfylsF4IUpM_Nq8Cg_te6avombFhlxj0/edit)
+[assignment week 2] (https://docs.google.com/document/d/1HwaSkUa0jq_UfylsF4IUpM_Nq8Cg_te6avombFhlxj0/edit)
 
 
