@@ -5,6 +5,7 @@
         init: function () {
             routes.init();
             myData.init();
+            sections.toggle("#app__list");
             searchRes.search();
         }
     };
@@ -21,7 +22,9 @@
     // Gets the change in hash from routes() and searches DOM for 'section' and hides/shows the section selected.
     var sections = {
         toggle: function (route) {
-            document.querySelectorAll('section');.forEach(function (el) {
+            var mySection = document.querySelectorAll('section');
+
+            mySection.forEach(function (el) {
                 if ('#' + el.id === route) {
                     el.classList.remove('section__hide');
                 } else {
@@ -35,7 +38,7 @@
     var myData = {
         init: function () {
             var request = new window.XMLHttpRequest();
-            var searchQuery = "blauw";
+            var searchQuery = "rembrandt";
             var api = "https://www.rijksmuseum.nl/api/nl/collection?q=" + searchQuery + "&key=NG2q9L0R&format=json";
 
             request.open("GET", api, true);
@@ -58,11 +61,22 @@
         }
     };
 
+    // Get the data and render on the page what i want
     // When user search -> Show information
     var searchRes = {
         search: function (query, searchQuery) {
             query.artObjects.forEach(function (el) {
-                console.log(el.webImage.url + "for searchquery: " + searchQuery);
+                console.log(el.webImage.url + " for searchquery: " + searchQuery);
+
+                var h1 = document.createElement('h1');
+                h1.textContent = el.title;
+
+                var img = document.createElement('img');
+                img.src = el.webImage.url;
+
+                document.getElementById('searchResult').appendChild(h1);
+                document.getElementById('searchResult').appendChild(img);
+
             });
         }
     };

@@ -15,38 +15,34 @@
 </head>
 
 <body>
+    <nav id="app__nav">
+        <ul>
+            <li><a href="#app__home">Home</a></li>
 
-<section class="#" id="app__home">
-    <header>
-        <h1>Single Page Web App</h1>
-    </header>
-</section>
+            <li><a href="#app__list">Rijksmuseum Wiki</a></li>
+        </ul>
+    </nav>
 
-<section class="section__hide" id="app__list">
-    <header>
-        <h1>Rijksmuseum Wiki</h1>
-    </header>
+    <section class="#" id="app__home">
+        <header>
+            <h1>Single Page Web App</h1>
+        </header>
+    </section>
 
-    <div>
-        <input type="search" class="searchQuery"><button class="searchquery__btn">ZOEK</button>
+    <section class="section__hide" id="app__list">
+        <header>
+            <h1>Rijksmuseum Wiki</h1>
+        </header>
 
-        <!--<li id="museum__object"></li>-->
-        <p id="museum__object"></p>
+        <div id="searchResult">
+            <input type="search" class="searchQuery"><button class="searchquery__btn">ZOEK</button>
 
-    </div>
+            <!--<li id="museum__object"></li>-->
 
-</section>
+        </div>
+    </section>
 
-<nav id="app__nav">
-    <ul>
-        <li><a href="#app__home">Home</a></li>
-
-        <li><a href="#app__list">Rijksmuseum Wiki</a></li>
-    </ul>
-</nav>
-
-<script type="text/javascript" src="static/app.js"></script>
 <script type="text/javascript" src="static/routie.js"></script>
-
+<script type="text/javascript" src="static/app.js"></script>
 </body>
 </html>

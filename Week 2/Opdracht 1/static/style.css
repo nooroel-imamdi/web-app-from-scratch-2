@@ -28,15 +28,20 @@ section, nav {
 }
 
 #app__home {
-    order: 2;
+
 }
 
 #app__list {
-    order: 3;
+    background: #40474f;
+    height: auto;
+}
+
+#app__list h1{
+    margin: 4em 0 0.5em 0;
+    color: #fff;
 }
 
 #app__nav {
-    order: 1;
     width: 100vw;
     margin:0;
     margin-bottom: 2.5em;
@@ -66,12 +71,20 @@ nav li:hover {
     background: lightpink;
 }
 
-.section__hide {
-    display: none;
-}
-
 .searchQuery , searchquery__btn {
     display: inline-block;
     width: 50%;
     height: 3em;
+}
+
+#searchResult {
+    width: 100vw;
+}
+
+#searchResult img {
+    width: 75%;
+}
+
+.section__hide {
+    display: none;
 }
