@@ -69,3 +69,9 @@ nav li:hover {
 .section__hide {
     display: none;
 }
+
+.searchQuery , searchquery__btn {
+    display: inline-block;
+    width: 50%;
+    height: 3em;
+}

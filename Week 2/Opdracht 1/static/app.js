@@ -21,9 +21,7 @@
     // Gets the change in hash from routes() and searches DOM for 'section' and hides/shows the section selected.
     var sections = {
         toggle: function (route) {
-            var mySection = document.querySelectorAll('section');
-
-            mySection.forEach(function (el) {
+            document.querySelectorAll('section');.forEach(function (el) {
                 if ('#' + el.id === route) {
                     el.classList.remove('section__hide');
                 } else {
@@ -37,7 +35,7 @@
     var myData = {
         init: function () {
             var request = new window.XMLHttpRequest();
-            var searchQuery = "rembrandt";
+            var searchQuery = "blauw";
             var api = "https://www.rijksmuseum.nl/api/nl/collection?q=" + searchQuery + "&key=NG2q9L0R&format=json";
 
             request.open("GET", api, true);
@@ -45,8 +43,8 @@
                 if (request.status >= 200 && request.status < 400) {
                     // Success!
                     var data = JSON.parse(request.responseText);
-                    searchRes.search(data);
-                    console.log(data , searchQuery);
+                    searchRes.search(data , searchQuery);
+                    // console.log(data , searchQuery);
                 } else {
                     console.log('We reached our target server, but it returned an error');
                 }
@@ -62,19 +60,10 @@
 
     // When user search -> Show information
     var searchRes = {
-        search: function (data, searchQuery) {
-            console.log(data.artObjects , searchQuery);
-
-            //ipv for loop van tutorial ->> forEach
-            for (var i = 0; i < data.artObjects.length; i++) {
-                console.log(data.artObjects[i].webImage.url);
-            }
-
-            data.artObjects.forEach(function (el) {
-                console.log(el.title);
+        search: function (query, searchQuery) {
+            query.artObjects.forEach(function (el) {
+                console.log(el.webImage.url + "for searchquery: " + searchQuery);
             });
-
-
         }
     };
 
