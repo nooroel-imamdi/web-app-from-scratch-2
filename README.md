@@ -26,6 +26,7 @@ repo for web app from scratch
 
 #### Other useful links
 - [AJAX and JSON tutorial] (https://www.youtube.com/watch?v=rJesac0_Ftw)
+- [How to: Localstorage in JS] (https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/)
 
 
 #### Assignments
