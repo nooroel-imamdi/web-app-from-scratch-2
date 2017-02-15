@@ -39,7 +39,6 @@ section, nav {
 }
 
 #app__list h2{
-    margin: 4em 0 0.5em 0;
     color: #f9f9f9;
 }
 
@@ -104,10 +103,19 @@ nav li:hover {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
+    flex-direction: column;
     max-width: 100%;
 }
 
+.art {
+    display: block;
+    height:40em;
+    width: 100%;
+    margin: 4em 0;
+}
+
 .art img {
+    height: auto;
     width: 100%;
 }
 
@@ -125,5 +133,24 @@ h1 {
 h2 {
     padding: 0 0.5em;
     border-left: 7px solid goldenrod;
-    font-size: 4em;
+    font-size: 3.5em;
+}
+
+.art h2 {
+    margin-bottom: 0.5em;
+}
+
+.art__moreinfo {
+    width: 100%;
+    border:0;
+    border-radius: 0 0 10px 10px;
+    padding: 0.5em;
+    background: #a2abad;
+    font-size: 1.5em;
+    color: #f9f9f9;
+}
+
+.art__moreinfo:hover {
+    color: #f9f9f9;
+    background: goldenrod;
 }
