@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+
     <title>Single Page Web App</title>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    <!--jquery cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="./static/style.css">
 </head>
 
@@ -18,21 +24,24 @@
 
 <section class="section__hide" id="app__list">
     <header>
-        <h1> Front-end Best Practices</h1>
+        <h1>Rijksmuseum Wiki</h1>
     </header>
 
-    <ul>
-        <li>item</li>
-        <li>item 2</li>
-        <li>item 3</li>
-    </ul>
+    <div>
+        <input type="search" class="searchQuery"><button onclick="searchRes.init()">ZOEK</button>
+
+        <!--<li id="museum__object"></li>-->
+        <p id="museum__object"></p>
+
+    </div>
+
 </section>
 
 <nav id="app__nav">
     <ul>
         <li><a href="#app__home">Home</a></li>
 
-        <li><a href="#app__list">Front-end Best Practices</a></li>
+        <li><a href="#app__list">Rijksmuseum Wiki</a></li>
     </ul>
 </nav>
 
