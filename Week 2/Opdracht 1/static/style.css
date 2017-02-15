@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -12,7 +12,8 @@ body {
 }
 
 header {
-    padding: 1.5em;
+    padding: 1.5em 0;
+    margin: 2.5em 0;
 }
 
 section, nav {
@@ -33,18 +34,17 @@ section, nav {
 
 #app__list {
     background: #40474f;
+    min-height: 100vh;
     height: auto;
 }
 
-#app__list h1{
+#app__list h2{
     margin: 4em 0 0.5em 0;
-    color: #fff;
+    color: #f9f9f9;
 }
 
 #app__nav {
-    width: 100vw;
     margin:0;
-    margin-bottom: 2.5em;
 }
 
 nav ul {
@@ -55,36 +55,75 @@ nav li{
     list-style: none;
     min-width: 50%;
     flex-flow: row;
-    background: cornflowerblue;
+    background: goldenrod;
     padding: 2.5em;
     margin: 0;
+    border-bottom: 5px solid #40474f;
 }
 
 nav li a {
-    color: #fff;
+    color: #f9f9f9;
     font-size: 1.25em;
-    border: 10px solid transparent;
+    border: 3em solid transparent;
 }
 
 nav li:hover {
     transition: 0.25s ease;
-    background: lightpink;
+    background: #40474f;
+    border-bottom: 5px solid goldenrod;
 }
 
-.searchQuery , searchquery__btn {
+#searchBar {
     display: inline-block;
-    width: 50%;
-    height: 3em;
+    padding: 0.5em;
+    border-radius:10px 10px 0 0;
+    width: 100%;
+    font-size: 2em;
 }
 
-#searchResult {
-    width: 100vw;
+#searchBar__btn {
+    width: 100%;
+    padding: 0.5em;
+    background: cadetblue;
+    font-size: 1.5em;
+    border:0;
+    border-radius: 0 0 10px 10px;
 }
 
-#searchResult img {
-    width: 75%;
+#searchBar__btn:hover {
+    background: goldenrod;
+    color: #40474f;
+}
+
+.artObj__desc {
+    padding: 1em;
+    background: #f9f9f9;
+}
+
+#artContainer {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.art img {
+    width: 100%;
 }
 
 .section__hide {
     display: none;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 6em;
+    color: #f9f9f9;
+}
+
+h2 {
+    padding: 0 0.5em;
+    border-left: 7px solid goldenrod;
+    font-size: 4em;
 }

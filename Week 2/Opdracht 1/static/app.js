@@ -6,7 +6,7 @@
             routes.init();
             myData.init();
             sections.toggle("#app__list");
-            searchRes.search();
+            onSearch.init();
         }
     };
 
@@ -34,11 +34,22 @@
         }
     };
 
+    // Get value from searchbox so i can send it to data
+    var onSearch = {
+        init: function() {
+            document.getElementById("searchBar__btn").addEventListener('click', this.getQuery);
+        },
+        getQuery: function(el) {
+            var query = document.getElementById('searchBar').value;
+            myData.init(query);
+        }
+    };
+
     // Gets dat from Rijksmuseum API
     var myData = {
-        init: function () {
+        init: function (query) {
             var request = new window.XMLHttpRequest();
-            var searchQuery = "rembrandt";
+            var searchQuery = query;
             var api = "https://www.rijksmuseum.nl/api/nl/collection?q=" + searchQuery + "&key=NG2q9L0R&format=json";
 
             request.open("GET", api, true);
@@ -46,8 +57,7 @@
                 if (request.status >= 200 && request.status < 400) {
                     // Success!
                     var data = JSON.parse(request.responseText);
-                    searchRes.search(data , searchQuery);
-                    // console.log(data , searchQuery);
+                    createHTML.search(data , searchQuery);
                 } else {
                     console.log('We reached our target server, but it returned an error');
                 }
@@ -63,21 +73,12 @@
 
     // Get the data and render on the page what i want
     // When user search -> Show information
-    var searchRes = {
-        search: function (query, searchQuery) {
-            query.artObjects.forEach(function (el) {
-                console.log(el.webImage.url + " for searchquery: " + searchQuery);
+    var createHTML = {
+        search: function (data, searchQuery) {
+            var compTemp = Handlebars.compile(document.getElementById("artObjects").innerHTML);
+            var renderedHTML = compTemp(data);
 
-                var h1 = document.createElement('h1');
-                h1.textContent = el.title;
-
-                var img = document.createElement('img');
-                img.src = el.webImage.url;
-
-                document.getElementById('searchResult').appendChild(h1);
-                document.getElementById('searchResult').appendChild(img);
-
-            });
+            document.getElementById('artContainer').innerHTML = renderedHTML;
         }
     };
 

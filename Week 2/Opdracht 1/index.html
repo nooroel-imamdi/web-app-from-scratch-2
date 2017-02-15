@@ -34,15 +34,22 @@
             <h1>Rijksmuseum Wiki</h1>
         </header>
 
-        <div id="searchResult">
-            <input type="search" class="searchQuery"><button class="searchquery__btn">ZOEK</button>
+        <input type="text" id="searchBar" placeholder="ex. 'rembrandt', 'blauw', 'vermeer' "><button id="searchBar__btn">SEARCH</button>
 
-            <!--<li id="museum__object"></li>-->
-
-        </div>
+        <div id="artContainer"></div>
+        <script type="text/x-handlebars-template" id="artObjects">
+            {{#each artObjects}}
+            <div class="art">
+                <h2>{{title}}</h2>
+                <img src={{webImage.url}}>
+                <h3 class="artObj__desc">{{longTitle}}</h3>
+            </div>
+            {{/each}}
+        </script>
     </section>
 
 <script type="text/javascript" src="static/routie.js"></script>
+<script type="text/javascript" src="static/handlebars-v4.0.5.js"></script>
 <script type="text/javascript" src="static/app.js"></script>
 </body>
 </html>
