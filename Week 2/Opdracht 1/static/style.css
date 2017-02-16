@@ -51,6 +51,7 @@ nav ul {
 }
 
 nav li{
+    position: relative;
     list-style: none;
     min-width: 50%;
     flex-flow: row;
@@ -64,6 +65,18 @@ nav li a {
     color: #f9f9f9;
     font-size: 1.25em;
     border: 3em solid transparent;
+}
+
+nav li a {
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
 }
 
 nav li:hover {
@@ -84,6 +97,7 @@ nav li:hover {
     width: 100%;
     padding: 0.5em;
     background: cadetblue;
+    color: #f9f9f9;
     font-size: 1.5em;
     border:0;
     border-radius: 0 0 10px 10px;
@@ -153,4 +167,10 @@ h2 {
 .art__moreinfo:hover {
     color: #f9f9f9;
     background: goldenrod;
+}
+
+art__details {
+    background: #f9f9f9;
+    height: 50em;
+    width: 50em;
 }
