@@ -90,7 +90,7 @@
     // When user search -> Show information
     var createHTML = {
         init: function (data) {
-            document.getElementById('artContainer').innerHTML = Handlebars.compile(document.getElementById("artObjects").innerHTML)(data);
+            document.getElementById('artContainer').innerHTML = Handlebars.compile(document.getElementById("artObjects").innerHTML)(data); 
 
             [].forEach.call(document.getElementsByClassName("art__moreinfo"), this.moreInfo);
         },
