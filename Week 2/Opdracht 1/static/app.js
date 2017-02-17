@@ -4,10 +4,9 @@
     var app = {
         init: function() {
             routes.init();
-            myData.init();
             sections.toggle("#app__list");
             onSearch.init();
-            createHTML.moreInfo();
+            // createHTML.moreInfo();
         }
     };
 
@@ -22,8 +21,7 @@
                     sections.toggle(window.location.hash);
                 },
                 'app__list/:id': function(id) {
-                    createHTML.hash(id);
-                    // Wat ik wil: #app_list/nl-SK-A-2860
+                    getHash.name(id);
                 }
             });
         }
@@ -62,8 +60,9 @@
                 if (request.status >= 200 && request.status < 400) {
                     // Success!
                     var data = JSON.parse(request.responseText);
-                    createHTML.search(data);
+                    getHash.data(data);
                     var artObj = data.artObjects;
+                    createHTML.init(data);
                 } else {
                     // No succes
                     console.log('We reached our target server, but it returned an error');
@@ -78,30 +77,30 @@
         }
     };
 
+    var getHash = {
+        name: function(hashname) {
+            console.log(hashname);
+        },
+        data: function(data) {
+            console.log(data);
+        }
+    };
+
     // Get the data and render on the page a couple of art pieces
     // When user search -> Show information
     var createHTML = {
-        search: function (data) {
+        init: function (data) {
             document.getElementById('artContainer').innerHTML = Handlebars.compile(document.getElementById("artObjects").innerHTML)(data);
 
             [].forEach.call(document.getElementsByClassName("art__moreinfo"), this.moreInfo);
         },
-        hash: function(hashname) {
-            console.log(hashname);
-            var hashId = hashname;
-        },
         // More info function for when user selects more info
         moreInfo: function(el) {
-            createHTML.hash();
-
-            console.log(sasas);
+            console.log(getHash.name(hash));
+            // console.log(getHash.data());
 
             if("#" + el === window.location.hash) {
-                routie({
-                    '*': function() {
-                        console.log(window.location.hash);
-                    }
-                })
+            //    Doe iets
             }
         }
     };
