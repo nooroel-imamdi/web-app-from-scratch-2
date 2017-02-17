@@ -67,16 +67,14 @@ nav li a {
     border: 3em solid transparent;
 }
 
-nav li a {
+nav li a::after {
     content: '';
-    position: absolute;
+    position: relative;
     top: 0;
     left:0;
     bottom: 0;
     right: 0;
     cursor: pointer;
-}
-
 }
 
 nav li:hover {
@@ -108,11 +106,6 @@ nav li:hover {
     color: #40474f;
 }
 
-.artObj__desc {
-    padding: 1em;
-    background: #f9f9f9;
-}
-
 #artContainer {
     display: flex;
     flex-flow: wrap;
@@ -123,9 +116,9 @@ nav li:hover {
 
 .art {
     display: block;
-    height:40em;
+    height: 25em;
     width: 100%;
-    margin: 4em 0;
+    margin: 12em 0;
 }
 
 .art img {
@@ -154,6 +147,16 @@ h2 {
     margin-bottom: 0.5em;
 }
 
+.art a{
+    width: 100%;
+    padding: 0.5em;
+    background: cadetblue;
+    color: #f9f9f9;
+    font-size: 1.5em;
+    border:0;
+    border-radius: 0 0 10px 10px;
+}
+
 .art__moreinfo {
     width: 100%;
     border:0;
@@ -169,8 +172,22 @@ h2 {
     background: goldenrod;
 }
 
-art__details {
+.art__details {
+    padding: 2.5em;
     background: #f9f9f9;
-    height: 50em;
+    border: 10px solid goldenrod;
+    height: auto;
     width: 50em;
+    margin-bottom: 10em;
+    line-height: 1.5em;
+}
+
+.art__details h3 {
+    padding: 1em 0 0 0;
+}
+
+.art__details img{
+    background: #f9f9f9;
+    height: auto;
+    width: 100%;
 }
