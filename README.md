@@ -1,6 +1,7 @@
 # web-app-from-scratch
 
-## [link to assignment] (https://cdn.rawgit.com/olli208/web-app-from-scratch/11f2ad14/opdracht%205%20-%20spa/index.html)
+## [week 2 assignment (Still working on it!!!)] (https://rawgit.com/olli208/web-app-from-scratch/master/Week%202/Opdracht%201/index.html)
+## [week 1 assignment ] (https://cdn.rawgit.com/olli208/web-app-from-scratch/11f2ad14/opdracht%205%20-%20spa/index.html)
 
 repo for web app from scratch
 
